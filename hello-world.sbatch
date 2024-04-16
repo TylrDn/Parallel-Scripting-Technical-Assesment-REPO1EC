@@ -1,0 +1,1 @@
+Slurm batch script for running the MPI hello world job

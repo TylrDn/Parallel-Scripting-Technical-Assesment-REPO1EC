@@ -1,6 +1,3 @@
-#		Slurm batch script for running the MPI hello world job
-
-
 #!/bin/bash
 #SBATCH --job-name=hello-world-mpi
 #SBATCH --output=hello-world-mpi_%j.out
@@ -16,7 +13,7 @@
 module load singularity
 
 # Define container image and mpirun command
-container="/path/to/hello-world.sif"
+container="./hello-world-mpi.sif"
 mpirun_cmd="singularity run --mpi $container"
 
 # Print job information

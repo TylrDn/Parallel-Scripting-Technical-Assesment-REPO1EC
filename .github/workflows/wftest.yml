@@ -1,6 +1,5 @@
-yaml
 name: Workflow tests
-on: 
+on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -14,4 +13,4 @@ jobs:
       - name: Install Planemo
         run: pip install planemo
       - name: Run workflow tests
-        run: planemo test workflow.ga
+        run: planemo test interactive-desktop-workflow.xml

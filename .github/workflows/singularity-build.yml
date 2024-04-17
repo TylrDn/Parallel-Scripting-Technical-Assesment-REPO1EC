@@ -25,4 +25,10 @@ jobs:
         
     - name: Build Singularity Container
       run: |
-        singularity build mpi-hello-world.sif mpi-hello-world.def
+        singularity build hello-world-mpi.sif hello-world-mpi-container.def
+        
+    - name: Upload Singularity Container
+      uses: actions/upload-artifact@v3
+      with:
+        name: singularity-container
+        path: hello-world-mpi.sif
